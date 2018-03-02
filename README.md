@@ -1,6 +1,10 @@
 # mouse_drawing_app
 simple gui app for the generation of 2d mouse input data
 
+Required Python packages:
+- Kivy
+- Numpy
+
 Basic usage guide:
 1. Run drawing_app.py. A small GUI window should open.
 2. Click within the window. You should be taken to a second screen with three buttons on the top and a black background.
