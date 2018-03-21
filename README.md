@@ -8,14 +8,14 @@ New features in v0.2:
 
 # Installation
 
+Installation procedure:
+1. Download or clone mouse_drawing_app.
+2. Run setup.py.
+
 Required Python packages:
 - Kivy
 - Numpy
 - Pandas
-
-Installation procedure:
-1. Download or clone mouse_drawing_app.
-2. Run setup.py.
 
 # Usage
 
