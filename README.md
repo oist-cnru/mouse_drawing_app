@@ -4,6 +4,7 @@ simple gui app for the generation of 2d mouse input data
 Required Python packages:
 - Kivy
 - Numpy
+- Pandas
 
 Installation procedure:
 1. run setup.py
@@ -21,9 +22,6 @@ Buglist (as of 16 March 2018):
 
 2. Cannot re-bind keys
 
-3. Keybinds do not affect screen, e.g. clear, but can affect the variables.
-https://stackoverflow.com/questions/32827495/kivy-make-buttons-change-the-text-of-textinput
-
 Other known issues:
-1. Incompatible with IPython/Jupyter Notebook (this is a general limitation of the Kivy module used in this app)
+1. Incompatible with IPython/Jupyter Notebook (this is a general limitation of the Kivy module used in this app). It was possible to use Kivy in Jupyter Notebook since Kivy version 1.3.0 using InteractiveLauncher (see documentation). However, this has been deprecated since version 1.10.0. Also see: https://stackoverflow.com/questions/36361742/connect-a-jupyter-notebook-to-a-running-python-app/
 2. When drawing_app.py is run from Spyder, you will need to set the run options so that it runs in a dedicated console. To do this, go to "Run" > "Configuration per file ..." or use Ctrl+F6 and under "Console" select "Execute in a dedicated console". When you run and then close the program, you will need to also close the new console terminal before re-launching (or execute drawing_app.py within a new console).
