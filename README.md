@@ -1,6 +1,8 @@
 # Tom's Mouse Drawing App
 This is a simple GUI app for the generation of 2d mouse input data. It is built using Kivy, which means it can run on Linux, Windows, OS X, Android, iOS, and Raspberry Pi.
 
+[![Demonstration of Tom's Mouse Drawing App v0.2](http://img.youtube.com/vi/e_qDdw-laag/0.jpg)](http://www.youtube.com/watch?v=e_qDdw-laag "Demonstration of Tom's Mouse Drawing App v0.2")
+
 New features in v0.2:
 - Automatic guidelines representing the half width, x = 0.5, and half height, y = 0.5, of the current screen. These guidlines are by default once per second.
 - Hover draw, allowing you to toggle a on/off the collection of drawing data without holding down any mouse buttons. This has the advantage that when you hold the mouse in one place it continues to add more data points at that location, which may be useful for training a 'stay' behaviour for an RNN.
