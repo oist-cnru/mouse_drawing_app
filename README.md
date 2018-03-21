@@ -1,5 +1,5 @@
 # Tom's Mouse Drawing App
-A simple gui app for the generation of 2d mouse input data.
+A simple GUI app for the generation of 2d mouse input data.
 
 New features in v0.2:
 - Automatic guidelines representing the half width, x = 0.5, and half height, y = 0.5, of the current screen. These guidlines are by default once per second.
