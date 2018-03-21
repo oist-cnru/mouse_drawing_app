@@ -1,5 +1,12 @@
-# mouse_drawing_app
-simple gui app for the generation of 2d mouse input data
+# Tom's Mouse Drawing App
+A simple gui app for the generation of 2d mouse input data.
+
+New features in v0.2:
+- Automatic guidelines representing the half width, x = 0.5, and half height, y = 0.5, of the current screen. These guidlines are by default once per second.
+- Hover draw, allowing you to toggle a on/off the collection of drawing data without holding down any mouse buttons. This has the advantage that when you hold the mouse in one place it continues to add more data points at that location, which may be useful for training a 'stay' behaviour for an RNN.
+- Options menu allowing you to resize the screen to specific dimensions, change the default save/load filename prefix, update frequencies for the guidelines and hover draw functions, and keybinds.
+
+# Installation
 
 Required Python packages:
 - Kivy
@@ -7,24 +14,29 @@ Required Python packages:
 - Pandas
 
 Installation procedure:
-1. run setup.py
+1. Download or clone mouse_drawing_app.
+2. Run setup.py.
+
+# Usage
 
 Basic usage guide:
 1. Run drawing_app.py. A small GUI window should open.
 2. Click "Draw" to be taken to a second screen with buttons on the top and a black background.
-3. Click and drag your cursor to draw on the canvas. As you do, your cursor's relative position (X, Y) on the screen will be printed in the Python console.
+3. Click and drag your cursor to draw on the canvas. As you do, your cursor's relative position (X, Y) on the screen will be printed in the Python console. Position 0, 0 is Left, Bottom, and position 1, 1 is Right, Top.
 4. When you release your cursor, the line drawing should stop.
-5. Click the button labelled 'save' to save the cursor positions you just drew (and which were just printed in the console) to a CSV file in the directory of drawing_app.py. This file will be called "touch_data1.csv".
-6. You may continue to draw and save a second file, i.e. "touch_data2.csv", and/or clear your current drawing at any point using the button labelled 'clear'.
+5. Click the button labelled 'save' (or press 's' on your keyboard) to save the cursor positions you just drew (and which were just printed in the console) to a CSV file in the directory of drawing_app.py. By default, this file will be called "touch_data1.csv" (you can change the default filename in the options menu).
+6. You may continue to draw and save a second file, i.e. "touch_data2.csv", and/or clear your current drawing at any point using the button labelled 'clear' (or by pressing 'c' on your keyboard).
 
-New features since v0.1:
-- Automatic guidelines representing the half width, x = 0.5, and half height, y = 0.5, of the current screen. These guidlines are by default once per second.
-- Hover draw, allowing you to toggle a on/off the collection of drawing data without holding down any mouse buttons. This has the advantage that when you hold the mouse in one place it continues to add more data points at that location, which may be useful for training a 'stay' behaviour for an RNN.
-- Options menu allowing you to resize the screen to specific dimensions, change the default save/load filename prefix, update frequencies for the guidelines and hover draw functions, and keybinds.
+Using other features:
+- Hover draw: by default, press 'h' on your keyboard to start a hover drawing and press 'h' again to complete it.
+- Loading drawings: currently, the load function just gets the most recently-saved drawing using the current filename and file index number, e.g. "touch_data1.csv". While the program is running, you can manually place and replace csv to load them as you wish.
+
+# Bugs and issues
 
 Buglist (as of 21 March 2018):
-1. Copy/paste bugs in text fields of 'options' menu. This is a known Kivy issue (https://github.com/kivy/kivy/pull/5579, https://stackoverflow.com/questions/46057977/copy-text-from-texit-input) and the fix will be available in the Kivy master branch soon (as of 16 March 2018).
-2. Cannot re-bind keys.
+1. Clicking during the short fading animation between screens can cause the program to crash.
+2. Keypresses don't register on the draw screen until there has been a touch on the screen.
+3. Copy/paste bugs in text fields of 'options' menu. This is a known Kivy issue (https://github.com/kivy/kivy/pull/5579, https://stackoverflow.com/questions/46057977/copy-text-from-texit-input) and the fix will be available in the Kivy master branch soon (as of 21 March 2018).
 
 Other known issues:
 1. Incompatible with IPython/Jupyter Notebook (this is a general limitation of the Kivy module used in this app). It was possible to use Kivy in Jupyter Notebook since Kivy version 1.3.0 using InteractiveLauncher. However, this has been deprecated since version 1.10.0. Also see: https://stackoverflow.com/questions/36361742/connect-a-jupyter-notebook-to-a-running-python-app/
