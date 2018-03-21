@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Mar  2 18:05:25 2018
+Last saved on Wed Mar 21 23:50:00 2018
 
 @author: TFBURNS
 """
@@ -49,5 +50,5 @@ setuptools.setup(
     packages=['mouse_drawing_app'],
 
     # required dependencies
-    install_requires=['numpy', 'kivy'],
+    install_requires=['numpy', 'kivy', 'pandas'],
 )
