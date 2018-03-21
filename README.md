@@ -1,6 +1,7 @@
 # Tom's Mouse Drawing App
 This is a simple GUI app for the generation of 2d mouse input data. It is built using Kivy, which means it can run on Linux, Windows, OS X, Android, iOS, and Raspberry Pi.
 
+Demonstration video:
 [![Demonstration of Tom's Mouse Drawing App v0.2](http://img.youtube.com/vi/e_qDdw-laag/0.jpg)](http://www.youtube.com/watch?v=e_qDdw-laag "Demonstration of Tom's Mouse Drawing App v0.2")
 
 New features in v0.2:
