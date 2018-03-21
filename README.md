@@ -17,7 +17,7 @@ Basic usage guide:
 5. Click the button labelled 'save' to save the cursor positions you just drew (and which were just printed in the console) to a CSV file in the directory of drawing_app.py. This file will be called "touch_data1.csv".
 6. You may continue to draw and save a second file, i.e. "touch_data2.csv", and/or clear your current drawing at any point using the button labelled 'clear'.
 
-Buglist (as of 16 March 2018):
+Buglist (as of 21 March 2018):
 1. Copy/paste bugs in text fields of 'options' menu. This is a known Kivy issue (https://github.com/kivy/kivy/pull/5579, https://stackoverflow.com/questions/46057977/copy-text-from-texit-input) and the fix will be available in the Kivy master branch soon (as of 16 March 2018).
 
 2. Cannot re-bind keys
