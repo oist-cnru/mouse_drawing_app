@@ -40,12 +40,7 @@ ScreenManagement:
 			on_press: app.root.current = "main"
 			text: "Apply & Back"
 			size_hint: 0.2,0.1
-		Button:
-			color: 0,1,0,1
-			background_color: 0.5,0.5,0.5,0.5
-			font_size: 20
-			on_press: root.on_release_clear_options()
-			text: "Clear"
+		Label:
 			size_hint: 0.2,0.1
 		Label:
 			text: "Window Width"
@@ -165,14 +160,6 @@ ScreenManagement:
 				font_size: 20
 				on_press: app.root.current = "main"
 				text: "Back"
-				size_hint: 0.2,0.1
-				pos_hint: {"right":1, "top":1}
-			Button:
-				color: 0,1,0,1
-				background_color: 0.5,0.5,0.5,0.5
-				font_size: 20
-				on_press: root.display_hover_draw()
-				text: "Display"
 				size_hint: 0.2,0.1
 				pos_hint: {"right":1, "top":1}
 			Button:

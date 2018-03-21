@@ -50,30 +50,6 @@ file_idx = 1
 
 class OptionsScreen(Screen):
     
-#    def __init__(self, **kwargs):
-#        super(OptionsScreen, self).__init__(**kwargs)
-#        self._keyboard = Window.request_keyboard(self._keyboard_closed, self)
-#        self._keyboard.bind(on_key_down=self._on_keyboard_down)
-#        
-#    def _keyboard_closed(self):
-#        self._keyboard.unbind(on_key_down=self._on_keyboard_down)
-#        self._keyboard = None
-#    
-#    def _on_keyboard_down(self, keyboard, keycode, text, modifiers):
-#        print('INFO: The key', keycode, 'has been pressed')
-#        if keycode[1] == kivy_variables.hover_key:
-#            if not kivy_variables.touch_data:
-#                print("INFO: Hover touch begun!")
-#                self.hover_draw()
-#            else:
-#                self.t.cancel()
-#                print("INFO: Hover touch ended!")
-#        if keycode[1] == kivy_variables.clear_key:
-#            self.on_release_clear()
-#        if keycode[1] == kivy_variables.save_key:
-#            self.save_csv()
-#        if keycode[1] == kivy_variables.load_key:
-#            self.load_csv()
     def on_release_clear_options(self):
         kivy_variables.touch_data = []
         self.root.ids.painter.canvas.clear()
@@ -106,7 +82,7 @@ class OptionsScreen(Screen):
         if self.ids.load_key_option.text:
             kivy_variables.load_key = self.ids.load_key_option.text
             
-        #self._keyboard.bind(on_key_down=self._on_keyboard_down)
+        DrawScreen.__init__(self)
 
 class DrawScreen(Screen):
 
@@ -128,14 +104,10 @@ class DrawScreen(Screen):
                 self.hover_draw()
             else:
                 self.t.cancel()
+                self.display_hover_draw()
                 print("INFO: Hover touch ended!")
         if keycode[1] == kivy_variables.clear_key:
             self.on_release_clear()
-            #self.canvas.ask_update()
-            #kivy_variables.touch_data = []
-            #self.ids.painter.canvas.clear()
-            #print("canvas clear")
-            #self.on_release_clear()
         if keycode[1] == kivy_variables.save_key:
             self.save_csv()
         if keycode[1] == kivy_variables.load_key:
@@ -209,15 +181,8 @@ class DrawScreen(Screen):
 class ScreenManagement(ScreenManager):
     pass
 
-presentation = Builder.load_file("main.kv")
-
 class MainApp(App):
-    
-    def build(self):
-        return presentation
-    
-    def callback(self, text):
-        self.root.ids.textbox.text = "Hi"
+    pass
 
 if __name__ == "__main__":
     MainApp().run()
