@@ -4,7 +4,7 @@ A simple GUI app for the generation of 2d mouse input data.
 New features in v0.2:
 - Automatic guidelines representing the half width, x = 0.5, and half height, y = 0.5, of the current screen. These guidlines are by default once per second.
 - Hover draw, allowing you to toggle a on/off the collection of drawing data without holding down any mouse buttons. This has the advantage that when you hold the mouse in one place it continues to add more data points at that location, which may be useful for training a 'stay' behaviour for an RNN.
-- Options menu allowing you to resize the screen to specific dimensions, change the default save/load filename prefix, update frequencies for the guidelines and hover draw functions, and keybinds.
+- Options menu allowing you to resize the screen to specific dimensions, change the default save/load filename prefix, update frequencies for the guidelines and hover draw functions, and change keybindings.
 
 # Installation
 
