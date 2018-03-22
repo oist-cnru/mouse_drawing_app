@@ -47,11 +47,11 @@ Using other features:
 
 # Bugs and issues
 
-Buglist (as of 21 March 2018):
+Buglist (as of 22 March 2018):
 1. Clicking during the short fading animation between screens can cause the program to crash.
 2. Keypresses don't register on the draw screen until there has been a touch on the screen.
 3. Screen resolution is not updated in the options menu if the user manually changes the window size.
-4. Copy/paste bugs in text fields of 'options' menu. This is a known Kivy issue (see [here](https://github.com/kivy/kivy/pull/5579) and [here](https://stackoverflow.com/questions/46057977/copy-text-from-texit-input)) and the fix will be available in the Kivy master branch soon (as of 21 March 2018).
+4. Copy/paste bugs in text fields of 'options' menu. This is a known Kivy issue (see [here](https://github.com/kivy/kivy/pull/5579) and [here](https://stackoverflow.com/questions/46057977/copy-text-from-texit-input)) and the fix will be available in the Kivy master branch soon.
 
 Other known issues:
 1. Incompatible with IPython/Jupyter Notebook (this is a general limitation of the Kivy module used in this app). It was possible to use Kivy in Jupyter Notebook since Kivy version 1.3.0 using InteractiveLauncher. However, this has been deprecated since version 1.10.0. Also see [here](https://stackoverflow.com/questions/36361742/connect-a-jupyter-notebook-to-a-running-python-app/).
