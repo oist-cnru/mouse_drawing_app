@@ -38,6 +38,7 @@ Basic usage guide:
 python drawing_app.py
 ```
 A small GUI window should open.
+
 2. Click "Draw" to be taken to a second screen with buttons on the top and a black background.
 3. Click and drag your cursor to draw on the canvas. As you do, your cursor's relative position (X, Y) on the screen will be printed in the Python console. Position 0, 0 is Left, Bottom, and position 1, 1 is Right, Top.
 4. When you release your cursor, the line drawing should stop.
