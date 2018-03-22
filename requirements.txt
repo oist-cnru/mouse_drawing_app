@@ -1,3 +1,5 @@
 numpy
-kivy
 pandas
+kivy
+pygame
+cython==2.6.1

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Mar  2 18:05:25 2018
-Last saved on Thu Mar 22 15:11:00 2018
+Last saved on Thu Mar 22 16:55:00 2018
 
 @author: TFBURNS
 """
@@ -13,15 +13,13 @@ For details: https://packaging.python.org/en/latest/distributing.html
 import os
 import setuptools
 
-
 here = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(here, 'README.md'), encoding='utf-8') as fd:
     long_description = fd.read()
 
-
 setuptools.setup(
     name='mouse_drawing_app',
-    version='0.2.0',
+    version='0.2.1',
 
     description="Tom's Mouse Drawing App",
     long_description='A simple GUI app for the generation of 2d mouse input data',
@@ -50,5 +48,5 @@ setuptools.setup(
     packages=['mouse_drawing_app'],
 
     # required dependencies
-    install_requires=['numpy', 'kivy', 'pandas'],
+    install_requires=['numpy', 'pandas', 'cython<0.27', 'pygame', 'docutils', 'pygments', 'pypiwin32', 'kivy.deps.sdl2', 'kivy.deps.glew', 'kivy'],
 )
