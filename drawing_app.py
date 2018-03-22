@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Mar 1 21:47:57 2018
-Last saved on Wed Mar 21 23:50:00 2018
+Last saved on Thu Mar 22 14:55:00 2018
 
 @author: Tom
 """
@@ -29,7 +29,7 @@ file_idx = 1 # set our starting file index number for saving touch data, i.e. fi
 class Painter(Widget):
 
     def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+        super(Painter, self).__init__(**kwargs)
         self.config_keyboard()
 
     def config_keyboard(self):
@@ -162,7 +162,7 @@ class OptionsScreen(Screen):
 class DrawScreen(Screen):
 
     def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+        super(DrawScreen, self).__init__(**kwargs)
         self._dynamic_guidelines()
 
     # draws guidelines along x=0.5 and y=0.5
