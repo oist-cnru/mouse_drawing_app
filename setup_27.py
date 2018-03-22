@@ -39,5 +39,5 @@ setup(
     packages=['mouse_drawing_app'],
 
     # required dependencies
-    install_requires=['numpy', 'pandas', 'kivy', 'pygame'],
+    install_requires=['numpy', 'pandas', 'cython<0.27', 'pygame', 'docutils', 'pygments', 'pypiwin32', 'kivy.deps.sdl2', 'kivy.deps.glew', 'kivy'],
 )
