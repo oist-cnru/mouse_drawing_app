@@ -1,4 +1,4 @@
-# Tom's Mouse Drawing App v0.2
+# Mouse Drawing App v0.2.1
 This is a simple GUI app for the generation of 2d mouse input data. It is built using Kivy, which means it can run on Linux, Windows, OS X, Android, iOS, and Raspberry Pi.
 
 Demonstration video:
@@ -15,15 +15,11 @@ New features in v0.2:
 Installation procedure:
 1. Download/clone mouse_drawing_app
 2. If you do not have Kivy installed, you will need to temporarily uninstall cython if its version is >=0.27 before proceding. This is because Kivy has some compilation issues with cython (see [here](https://kivy.org/docs/installation/deps-cython.html#known-issues)). After you have finished the installation, you can reinstall cython 0.27 or higher.
-3. In the mouse_drawing_app directory, if you are using python 3, run 
+3. In the mouse_drawing_app directory, run 
 ```
 python setup.py install
 ```
-and if you are running python 2.7, run
-```
-python setup_27.py install
-```
-4. If the setup.py install is successful, you may proceed to usage. If it was not successful, you may need to manually install the Kivy package.
+4. If the setup.py install is successful, you may proceed to [usage](#usage). If it was not successful, you may need to manually install the Kivy package.
 
 Required Python packages:
 - Kivy
@@ -51,11 +47,11 @@ Using other features:
 
 # Bugs and issues
 
-Buglist (as of 21 March 2018):
+Buglist (as of 22 March 2018):
 1. Clicking during the short fading animation between screens can cause the program to crash.
 2. Keypresses don't register on the draw screen until there has been a touch on the screen.
 3. Screen resolution is not updated in the options menu if the user manually changes the window size.
-4. Copy/paste bugs in text fields of 'options' menu. This is a known Kivy issue (see [here](https://github.com/kivy/kivy/pull/5579) and [here](https://stackoverflow.com/questions/46057977/copy-text-from-texit-input)) and the fix will be available in the Kivy master branch soon (as of 21 March 2018).
+4. Copy/paste bugs in text fields of 'options' menu. This is a known Kivy issue (see [here](https://github.com/kivy/kivy/pull/5579) and [here](https://stackoverflow.com/questions/46057977/copy-text-from-texit-input)) and the fix will be available in the Kivy master branch soon.
 
 Other known issues:
 1. Incompatible with IPython/Jupyter Notebook (this is a general limitation of the Kivy module used in this app). It was possible to use Kivy in Jupyter Notebook since Kivy version 1.3.0 using InteractiveLauncher. However, this has been deprecated since version 1.10.0. Also see [here](https://stackoverflow.com/questions/36361742/connect-a-jupyter-notebook-to-a-running-python-app/).

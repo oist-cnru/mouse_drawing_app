@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Mar  2 18:05:25 2018
-Last saved on Thu Mar 22 16:55:00 2018
+Last saved on Thu Mar 22 20:23:00 2018
 
 @author: TFBURNS
 """
@@ -14,7 +14,7 @@ import os
 import setuptools
 
 here = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(here, 'README.md'), encoding='utf-8') as fd:
+with open(os.path.join(here, 'README.md')) as fd:
     long_description = fd.read()
 
 setuptools.setup(
@@ -48,5 +48,5 @@ setuptools.setup(
     packages=['mouse_drawing_app'],
 
     # required dependencies
-    install_requires=['numpy', 'pandas', 'cython<0.27', 'pygame', 'docutils', 'pygments', 'pypiwin32', 'kivy.deps.sdl2', 'kivy.deps.glew', 'kivy'],
+    install_requires=['numpy', 'pandas', 'cython==0.26.1', 'docutils', 'pypiwin32', 'pygame', 'pygments', 'kivy.deps.sdl2', 'kivy.deps.glew', 'kivy'],
 )
