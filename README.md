@@ -17,11 +17,11 @@ Installation procedure:
 2. If you do not have Kivy installed, you will need to temporarily uninstall cython if its version is >=0.27 before proceding. This is because Kivy has some compilation issues with cython (see here: https://kivy.org/docs/installation/deps-cython.html#known-issues). After you have finished the installation, you can reinstall cython 0.27 or higher.
 3. In the mouse_drawing_app directory, if you are using python 3, run 
 ```
-python setup.py develop
+python setup.py install
 ```
 and if you are running python 2.7, run
 ```
-python setup_27.py develop
+python setup_27.py install
 ```
 4. If the setup.py install is successful, you may proceed to usage. If it was not successful, you may need to manually install the Kivy package.
 
@@ -39,7 +39,7 @@ python drawing_app.py
 ```
 A small GUI window should open.
 
-2. Click "Draw" to be taken to a second screen with buttons on the top and a black background.
+2. Click "Draw" to be taken to another screen with buttons on the top and a black background.
 3. Click and drag your cursor to draw on the canvas. As you do, your cursor's relative position (X, Y) on the screen will be printed in the Python console. Position 0, 0 is Left, Bottom, and position 1, 1 is Right, Top.
 4. When you release your cursor, the line drawing should stop.
 5. Click the button labelled 'save' (or press 's' on your keyboard) to save the cursor positions you just drew (and which were just printed in the console) to a CSV file in the directory of drawing_app.py. By default, this file will be called "touch_data1.csv" (you can change the default filename in the options menu).
