@@ -1,4 +1,4 @@
-# Tom's Mouse Drawing App v0.2
+# Mouse Drawing App v0.2.1
 This is a simple GUI app for the generation of 2d mouse input data. It is built using Kivy, which means it can run on Linux, Windows, OS X, Android, iOS, and Raspberry Pi.
 
 Demonstration video:
@@ -15,15 +15,11 @@ New features in v0.2:
 Installation procedure:
 1. Download/clone mouse_drawing_app
 2. If you do not have Kivy installed, you will need to temporarily uninstall cython if its version is >=0.27 before proceding. This is because Kivy has some compilation issues with cython (see [here](https://kivy.org/docs/installation/deps-cython.html#known-issues)). After you have finished the installation, you can reinstall cython 0.27 or higher.
-3. In the mouse_drawing_app directory, if you are using python 3, run 
+3. In the mouse_drawing_app directory, run 
 ```
 python setup.py install
 ```
-and if you are running python 2.7, run
-```
-python setup_27.py install
-```
-4. If the setup.py install is successful, you may proceed to usage. If it was not successful, you may need to manually install the Kivy package.
+4. If the setup.py install is successful, you may proceed to [usage](#Usage). If it was not successful, you may need to manually install the Kivy package.
 
 Required Python packages:
 - Kivy
