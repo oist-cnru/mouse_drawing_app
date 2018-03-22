@@ -13,8 +13,17 @@ New features in v0.2:
 # Installation
 
 Installation procedure:
-1. Download or clone mouse_drawing_app.
-2. Run setup.py.
+1. Download/clone mouse_drawing_app
+2. If you do not have Kivy installed, you will need to temporarily uninstall cython if its version is >=0.27 before proceding. This is because Kivy has some compilation issues with cython (see [here](https://kivy.org/docs/installation/deps-cython.html#known-issues)). After you have finished the installation, you can reinstall cython 0.27 or higher.
+3. In the mouse_drawing_app directory, if you are using python 3, run 
+```
+python setup.py install
+```
+and if you are running python 2.7, run
+```
+python setup_27.py install
+```
+4. If the setup.py install is successful, you may proceed to usage. If it was not successful, you may need to manually install the Kivy package.
 
 Required Python packages:
 - Kivy
@@ -24,8 +33,13 @@ Required Python packages:
 # Usage
 
 Basic usage guide:
-1. Run drawing_app.py. A small GUI window should open.
-2. Click "Draw" to be taken to a second screen with buttons on the top and a black background.
+1. Run drawing_app.py.
+```
+python drawing_app.py
+```
+A small GUI window should open.
+
+2. Click "Draw" to be taken to another screen with buttons on the top and a black background.
 3. Click and drag your cursor to draw on the canvas. As you do, your cursor's relative position (X, Y) on the screen will be printed in the Python console. Position 0, 0 is Left, Bottom, and position 1, 1 is Right, Top.
 4. When you release your cursor, the line drawing should stop.
 5. Click the button labelled 'save' (or press 's' on your keyboard) to save the cursor positions you just drew (and which were just printed in the console) to a CSV file in the directory of drawing_app.py. By default, this file will be called "touch_data1.csv" (you can change the default filename in the options menu).
@@ -41,8 +55,8 @@ Buglist (as of 21 March 2018):
 1. Clicking during the short fading animation between screens can cause the program to crash.
 2. Keypresses don't register on the draw screen until there has been a touch on the screen.
 3. Screen resolution is not updated in the options menu if the user manually changes the window size.
-4. Copy/paste bugs in text fields of 'options' menu. This is a known Kivy issue (https://github.com/kivy/kivy/pull/5579, https://stackoverflow.com/questions/46057977/copy-text-from-texit-input) and the fix will be available in the Kivy master branch soon (as of 21 March 2018).
+4. Copy/paste bugs in text fields of 'options' menu. This is a known Kivy issue (see [here](https://github.com/kivy/kivy/pull/5579) and [here](https://stackoverflow.com/questions/46057977/copy-text-from-texit-input)) and the fix will be available in the Kivy master branch soon (as of 21 March 2018).
 
 Other known issues:
-1. Incompatible with IPython/Jupyter Notebook (this is a general limitation of the Kivy module used in this app). It was possible to use Kivy in Jupyter Notebook since Kivy version 1.3.0 using InteractiveLauncher. However, this has been deprecated since version 1.10.0. Also see: https://stackoverflow.com/questions/36361742/connect-a-jupyter-notebook-to-a-running-python-app/
+1. Incompatible with IPython/Jupyter Notebook (this is a general limitation of the Kivy module used in this app). It was possible to use Kivy in Jupyter Notebook since Kivy version 1.3.0 using InteractiveLauncher. However, this has been deprecated since version 1.10.0. Also see [here](https://stackoverflow.com/questions/36361742/connect-a-jupyter-notebook-to-a-running-python-app/).
 2. When drawing_app.py is run from Spyder, you will need to set the run options so that it runs in a dedicated console. To do this, go to "Run" > "Configuration per file ..." or use Ctrl+F6 and under "Console" select "Execute in a dedicated console". When you run and then close the program, you will need to also close the new console terminal before re-launching (or execute drawing_app.py within a new console).
