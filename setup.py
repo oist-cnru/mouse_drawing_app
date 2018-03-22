@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Mar  2 18:05:25 2018
-Last saved on Wed Mar 21 23:50:00 2018
+Last saved on Thu Mar 22 15:11:00 2018
 
 @author: TFBURNS
 """
@@ -15,16 +15,16 @@ import setuptools
 
 
 here = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(here, 'readme.md'), encoding='utf-8') as fd:
+with open(os.path.join(here, 'README.md'), encoding='utf-8') as fd:
     long_description = fd.read()
 
 
 setuptools.setup(
     name='mouse_drawing_app',
-    version='0.1.0',
+    version='0.2.0',
 
-    description='Mouse Drawing App',
-    long_description='simple gui app for the generation of 2d mouse input data',
+    description="Tom's Mouse Drawing App",
+    long_description='A simple GUI app for the generation of 2d mouse input data',
 
     url='https://github.com/oist-cnru/mouse_drawing_app',
 
