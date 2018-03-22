@@ -19,7 +19,7 @@ Installation procedure:
 ```
 python setup.py install
 ```
-4. If the setup.py install is successful, you may proceed to [usage](#Usage). If it was not successful, you may need to manually install the Kivy package.
+4. If the setup.py install is successful, you may proceed to [usage](#usage). If it was not successful, you may need to manually install the Kivy package.
 
 Required Python packages:
 - Kivy
