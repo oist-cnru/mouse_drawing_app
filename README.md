@@ -6,8 +6,8 @@ Demonstration video:
 [![Demonstration of Tom's Mouse Drawing App v0.2](http://img.youtube.com/vi/pgXEHdsYymY/0.jpg)](http://www.youtube.com/watch?v=pgXEHdsYymY "Demonstration of Tom's Mouse Drawing App v0.2")
 
 New features in v0.2:
-- Automatic guidelines representing the half width, x = 0.5, and half height, y = 0.5, of the current screen. These guidlines are by default once per second.
-- Hover draw, allowing you to toggle a on/off the collection of drawing data without holding down any mouse buttons. This has the advantage that when you hold the mouse in one place it continues to add more data points at that location, which may be useful for training a 'stay' behaviour for an RNN.
+- Automatic guidelines representing the half width, x = 0.5, and half height, y = 0.5, of the current screen. These guidlines are by default drawn once per second.
+- Hover draw, allowing you to toggle a on/off the collection of drawing data without holding down any mouse buttons. This has the advantage that when you hold the mouse in one place it continues to add more data points at that location, which may be useful for training a 'stay' behaviour for a RNN.
 - Options menu allowing you to resize the screen to specific dimensions, change the default save/load filename prefix, update frequencies for the guidelines and hover draw functions, and change keybindings.
 
 # Installation
@@ -56,3 +56,6 @@ Buglist (as of 22 March 2018):
 Other known issues:
 1. Incompatible with IPython/Jupyter Notebook (this is a general limitation of the Kivy module used in this app). It was possible to use Kivy in Jupyter Notebook since Kivy version 1.3.0 using InteractiveLauncher. However, this has been deprecated since version 1.10.0. Also see [here](https://stackoverflow.com/questions/36361742/connect-a-jupyter-notebook-to-a-running-python-app/).
 2. When drawing_app.py is run from Spyder, you will need to set the run options so that it runs in a dedicated console. To do this, go to "Run" > "Configuration per file ..." or use Ctrl+F6 and under "Console" select "Execute in a dedicated console". When you run and then close the program, you will need to also close the new console terminal before re-launching (or execute drawing_app.py within a new console).
+
+# Usage with Python 2.7
+The app is designed to be used with Python 3.6. Although the app currently works in Python 2.7 environments, 2.7 it is not supported.
