@@ -46,10 +46,12 @@ class Painter(Widget):
             if not kivy_variables.touch_data:   # checks that touch data doesn't exist
                 print("INFO: Hover touch begun!")
                 self.hover_draw()               # if no touch data exists, start drawing
-            else:
-                self.t.cancel()                 # if touch data exists, stop drawing
+            elif hasattr(self, 't') :
+                self.t.cancel()                 # if touch data exists, stop hover drawing
                 self.display_hover_draw()       # display the hover touch data
                 print("INFO: Hover touch ended!")
+            else :
+                print("WARN: Hover touch attempted to start, but touch data already exists!")
         if keycode[1] == kivy_variables.clear_key:
             self.on_release_clear()     # clear the canvas
         if keycode[1] == kivy_variables.save_key:
