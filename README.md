@@ -13,7 +13,7 @@ New features in v0.2:
 ## Installation
 
 ### Cython version
-The Mouse Drawing App uses Kivy, [which will only install with Cython <=0.23 and >=0.26.1](https://kivy.org/docs/installation/deps-cython.html#known-issues. You can check your current version with:
+The Mouse Drawing App uses Kivy, [which will only install with Cython <=0.23 and >=0.26.1](https://kivy.org/docs/installation/deps-cython.html#known-issues). You can check your current version with:
 ```
 pip freeze | grep Cython
 ```
