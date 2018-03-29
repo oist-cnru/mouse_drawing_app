@@ -6,10 +6,6 @@ Last saved on Thu Mar 22 20:23:00 2018
 @author: TFBURNS
 """
 
-"""Setup script
-For details: https://packaging.python.org/en/latest/distributing.html
-"""
-
 import os
 import setuptools
 
@@ -48,5 +44,5 @@ setuptools.setup(
     packages=['mouse_drawing_app'],
 
     # required dependencies
-    install_requires=['numpy', 'pandas', 'cython==0.26.1', 'docutils', 'pypiwin32', 'pygame', 'pygments', 'kivy.deps.sdl2', 'kivy.deps.glew', 'kivy'],
+    install_requires=[],
 )

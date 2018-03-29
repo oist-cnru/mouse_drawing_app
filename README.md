@@ -10,23 +10,43 @@ New features in v0.2:
 - Hover draw, allowing you to toggle a on/off the collection of drawing data without holding down any mouse buttons. This has the advantage that when you hold the mouse in one place it continues to add more data points at that location, which may be useful for training a 'stay' behaviour for an RNN.
 - Options menu allowing you to resize the screen to specific dimensions, change the default save/load filename prefix, update frequencies for the guidelines and hover draw functions, and change keybindings.
 
-# Installation
+## Installation
 
-Installation procedure:
-1. Download/clone mouse_drawing_app
-2. If you do not have Kivy installed, you will need to temporarily uninstall cython if its version is >=0.27 before proceding. This is because Kivy has some compilation issues with cython (see [here](https://kivy.org/docs/installation/deps-cython.html#known-issues)). After you have finished the installation, you can reinstall cython 0.27 or higher.
-3. In the mouse_drawing_app directory, run 
+### Cython version
+The Mouse Drawing App uses Kivy, [which will only install with Cython <=0.23 and >=0.26.1](https://kivy.org/docs/installation/deps-cython.html#known-issues. You can check your current version with:
+```
+pip freeze | grep Cython
+```
+If present and not adequate, uninstall your current Cython.
+```
+pip uninstall Cython
+```
+Install the a correct Cython version.
+```
+pip install Cython==0.26.1
+```
+You can safely reinstall your other Cython version after the installation.
+
+### Windows users
+
+Make sure `pypiwin32` is installed.
+```
+pip install pypiwin32
+```
+
+### Dependencies & install
+
+After cloning the repository, install dependencies using:
+```
+pip install -r requirements.txt
+```
+
+Then:
 ```
 python setup.py install
 ```
-4. If the setup.py install is successful, you may proceed to [usage](#usage). If it was not successful, you may need to manually install the Kivy package.
 
-Required Python packages:
-- Kivy
-- Numpy
-- Pandas
-
-# Usage
+## Usage
 
 Basic usage guide:
 1. Run drawing_app.py.
@@ -45,7 +65,7 @@ Using other features:
 - Hover draw: by default, press 'h' on your keyboard to start a hover drawing and press 'h' again to complete it.
 - Loading drawings: currently, the load function just gets the most recently-saved drawing using the current filename and file index number, e.g. "touch_data1.csv". While the program is running, you can manually place and replace csv to load them as you wish.
 
-# Bugs and issues
+## Bugs and issues
 
 Buglist (as of 22 March 2018):
 1. Clicking during the short fading animation between screens can cause the program to crash.
