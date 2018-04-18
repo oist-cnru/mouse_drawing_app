@@ -1,14 +1,9 @@
-# Mouse Drawing App v0.2.1
-This is a simple GUI app for the generation of 2d mouse input data. It is built using Kivy, which means it can run on Linux, Windows, OS X, Android, iOS, and Raspberry Pi.
+# Mouse Drawing App v0.3
+This is a simple GUI app for the generation of 2d mouse input data. It is built using Kivy.
 
 Demonstration video:
 
 [![Demonstration of Tom's Mouse Drawing App v0.2](http://img.youtube.com/vi/pgXEHdsYymY/0.jpg)](http://www.youtube.com/watch?v=pgXEHdsYymY "Demonstration of Tom's Mouse Drawing App v0.2")
-
-New features in v0.2:
-- Automatic guidelines representing the half width, x = 0.5, and half height, y = 0.5, of the current screen. These guidlines are by default once per second.
-- Hover draw, allowing you to toggle a on/off the collection of drawing data without holding down any mouse buttons. This has the advantage that when you hold the mouse in one place it continues to add more data points at that location, which may be useful for training a 'stay' behaviour for an RNN.
-- Options menu allowing you to resize the screen to specific dimensions, change the default save/load filename prefix, update frequencies for the guidelines and hover draw functions, and change keybindings.
 
 ## Installation
 
@@ -67,7 +62,7 @@ Using other features:
 
 ## Bugs and issues
 
-Buglist (as of 22 March 2018):
+Buglist (as of 18 April 2018):
 1. Clicking during the short fading animation between screens can cause the program to crash.
 2. Keypresses don't register on the draw screen until there has been a touch on the screen.
 3. Screen resolution is not updated in the options menu if the user manually changes the window size.
