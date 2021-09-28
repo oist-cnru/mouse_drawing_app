@@ -35,7 +35,8 @@ After cloning the repository, install dependencies using:
 ```
 pip install -r requirements.txt
 ```
-Note: The above-mentioned dependencies have been tested for an installation of new Python 3.7.9 environment installed from Conda 4.10.3. Other versions of Python may additionally require installation of: 
+
+Note: The above-mentioned dependencies have been tested for an installation of a new Python 3.7.9 environment installed from Conda 4.10.3. Other versions of Python may additionally require installation of: 
 ```
 kivy.deps.sdl2
 kivy.deps.glew
